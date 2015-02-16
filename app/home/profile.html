@@ -1,0 +1,33 @@
+<div class="top-left">
+	<div class="objective">{{objective}}</div>
+	<div class="education section">
+		<div class="sub-title">Education</div>
+		<div>
+			<div class="school">{{education.school}}</div>
+			<div class="years-attended">{{education.yearsAttended}}</div>
+		</div>
+		<div class="degree">{{education.degree}}</div>
+	</div>
+</div>
+<div class="top-right pic"></div>
+
+<div class="skills section">
+	<div class="skills-header">
+		<div class="sub-title">Skills</div>
+		<div class="proficiency-legend">
+			<div ng-repeat="level in proficiencyLevels" class="pair">
+				<div class="color {{level.value}}"></div>
+				<div class="value">{{level.value}}</div>
+			</div>
+		</div>
+	</div>
+	<div ng-repeat="skillSet in skills" class="skillSet">
+		<div class="sub-sub-title">{{skillSet.title}}</div>
+		<div ng-repeat="skill in skillSet.list" class="skill">
+			<div class="proficiency-level {{proficiencyLevels[skill.proficiency].value}}"></div>
+			<div>{{skill.skill}}</div>
+		</div>
+	</div>
+	<div class="back-end"></div>
+	<div class="tools"></div>
+</div>

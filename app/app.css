@@ -1,0 +1,508 @@
+/* app css stylesheet */
+
+body {
+  background-image: url("images/crosshatch-lavenderinverse.png");
+}
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+/*****************************************/
+/* tab and body styles                   */
+/* enhance and override jquery-ui styles */
+/*****************************************/
+
+.ui-widget {
+  position: absolute;
+  margin-top: 90px;
+  top: 20px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  min-width: 720px;
+  max-width: 1200px;
+  background-color: #008B8B;
+}
+
+.ui-widget-content {
+  border: none;
+}
+
+.ui-tabs .ui-tabs-nav {
+  padding-left: 50px;
+  margin-top: -70px;
+}
+
+.ui-tabs .ui-tabs-nav li {
+  margin-right: 12px;
+  font-weight: bold;
+}
+
+.ui-tabs .ui-tabs-panel {
+  border: 1px solid #ddd;
+  border-bottom: none;
+  padding: 12px 32px;
+
+  z-index: 1;
+  background: #f9f9ea;
+  position: relative;
+  border-width: 1px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  min-height: 100%;
+  margin: auto -10px;
+  box-shadow: 0px 0px 12px 4px #dadaf5;
+}
+
+.ui-tabs .ui-corner-top {
+  border-top-right-radius: 18px;
+  border-top-left-radius: 18px;
+}
+
+.ui-widget-header {
+  background: none;
+  border: none;
+  margin-top: -70px;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+  z-index: 2;
+  background: #f9f9ea;
+  border-color: #ddd;
+  box-shadow: 0px 0px 12px 4px #dadaf5;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+  outline: none;
+  padding: 10px 34px;
+}
+
+/* specific styles for 1st tab */
+.ui-tabs .ui-tabs-nav li:first-child {
+  height: 74px;
+  margin-top: -30px;
+}
+
+.ui-tabs .ui-tabs-nav .main-tab .ui-tabs-anchor{
+  font-size: 42px;
+  padding: 4px 78px;
+}
+
+li.ui-state-active .ui-tabs-anchor:before,
+li.ui-state-active .ui-tabs-anchor:after,
+li:not(.ui-state-active) .ui-tabs-anchor:before,
+li:not(.ui-state-active) .ui-tabs-anchor:after {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  content: " ";
+}
+
+li.ui-state-active .ui-tabs-anchor:before,
+li.ui-state-active .ui-tabs-anchor:after {
+  bottom: 0px;
+  border: 1px solid #ddd;
+}
+
+li:not(.ui-state-active) .ui-tabs-anchor:before,
+li:not(.ui-state-active) .ui-tabs-anchor:after {
+  bottom: -1px;
+  border: 1px solid #d2d2d2;
+}
+
+li.ui-state-active .ui-tabs-anchor:before {
+  left: -11px;
+  border-width: 0 1px 1px 0;
+  border-bottom-right-radius: 10px;
+  box-shadow: 5px 6px 0 3px #f9f9ea;
+}
+
+li.ui-state-active .ui-tabs-anchor:after {
+  right: -11px;
+  border-width: 0 0 1px 1px;
+  border-bottom-left-radius: 10px;
+  box-shadow: -5px 6px 0 3px #f9f9ea;
+}
+
+li:not(.ui-state-active) .ui-tabs-anchor:before {
+  left: -11px;
+  border-width: 0 1px 1px 0;
+  border-bottom-right-radius: 10px;
+  box-shadow: 4px 3px 0 #fcfcf4;
+}
+
+li:not(.ui-state-active) .ui-tabs-anchor:after {
+  right: -11px;
+  border-width: 0 0 1px 1px;
+  border-bottom-left-radius: 10px;
+  box-shadow: -5px 0px 0px #fcfcf4;
+}
+
+.ui-state-default:not(.ui-state-active) {
+  background: #fcfcf4;
+  border-color: #ddd;
+}
+
+.ui-tabs .ui-tabs-nav li:not(.ui-state-active):hover {
+  border-color: #d3d3d3;
+}
+
+.ui-tabs .ui-tabs-nav li:focus {
+  outline: none;
+}
+
+/****************************/
+/* specific to profile page */
+/****************************/
+
+.ui-tabs .ui-tabs-nav .main-tab .my-name {
+  background-image: url("images/my-name.png");
+  background-repeat: no-repeat;
+  width: 152px;
+  height: 65px;
+}
+
+.ui-tabs .ui-tabs-panel .top-left,
+.ui-tabs .ui-tabs-panel .top-right {
+  display: inline-block;
+}
+
+.ui-tabs .ui-tabs-panel .top-left {
+  width: 65%;
+}
+
+.ui-tabs .ui-tabs-panel .pic {
+  background-image: url("images/profile-pic2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  height: 340px;
+  width: 34%;
+  margin-top: 10px;
+  margin-bottom: -60px;
+  vertical-align: top;
+}
+
+.ui-tabs .ui-tabs-panel .objective {
+  margin-top: 16px;
+}
+
+.ui-tabs .ui-tabs-panel .sub-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.ui-tabs .ui-tabs-panel .section {
+  margin-top: 45px;
+}
+
+.ui-state-default:not(.ui-state-active) a:link {
+  color: #777;
+}
+
+.ui-tabs .ui-tabs-panel .skills .sub-sub-title {
+  font-weight: bold;
+  background-color: #dadaf5;
+  border-radius: 30px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.ui-tabs .ui-tabs-panel .skills .skillSet {
+  margin-bottom: 20px;
+}
+
+.ui-tabs .ui-tabs-panel .skills .skill {
+  display: inline-block;
+  width: 25%;
+  min-width: 260px;
+  margin-left: 20px;
+}
+
+.ui-tabs .ui-tabs-panel .skills .skill * {
+  display: inline-block;
+}
+
+.ui-tabs .ui-tabs-panel .skills .skill .proficiency-level {
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+}
+
+.ui-tabs .ui-tabs-panel .novice {
+  background-color: #ccd9fe;
+}
+
+.ui-tabs .ui-tabs-panel .intermediate {
+  background-color: #5070fb;
+}
+
+.ui-tabs .ui-tabs-panel .advanced {
+  background-color: #001d9a;
+}
+
+/* skills legend */
+.ui-tabs .ui-tabs-panel .skills-header * {
+  display: inline-block;
+}
+
+.ui-tabs .ui-tabs-panel .proficiency-legend {
+  border: 1px solid #aaa;
+  line-height: 18px;
+  vertical-align: top;
+  margin-top: 6px;
+  margin-left: 36px;
+  font-size: 12px;
+  text-transform: capitalize;
+  font-style: italic;
+  color: #333;
+  border-radius: 4px;
+}
+
+.ui-tabs .ui-tabs-panel .proficiency-legend .pair {
+  margin-left: 8px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.ui-tabs .ui-tabs-panel .proficiency-legend .color {
+  width: 13px;
+  height: 13px;
+  margin-top: -3px;
+  vertical-align: middle;
+}
+
+/* block the bottom shadow of the active tab */
+.ui-state-default.ui-state-active .shadow-blocker {
+  position: absolute;
+  width: 100%;
+  height: 14px;
+  background-color: #f9f9ea;
+}
+
+.ui-state-default.ui-state-active.main-tab .shadow-blocker {
+  margin-top: 74px;
+}
+
+.ui-state-default.ui-state-active:not(.main-tab) .shadow-blocker {
+  margin-top: 40px;
+}
+
+/* mobile screen support */
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 768px) {
+  .ui-widget {
+    margin-top: 84px;
+    min-width: 600px;
+  }
+
+  .ui-tabs .ui-tabs-nav .main-tab .ui-tabs-anchor {
+    padding: 4px 40px;
+  }
+
+  .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    padding: 10px 30px;
+  }
+
+  .ui-tabs .ui-tabs-nav li:first-child {
+    height: 68px;
+    margin-top: -24px;
+  }
+
+  .ui-tabs .ui-tabs-panel {
+    font-size: 14px;
+  }
+
+  .ui-state-default.ui-state-active.main-tab .shadow-blocker {
+    margin-top: 68px;
+  }
+
+  .ui-tabs .ui-tabs-panel .skills .skill {
+    width: 50%;
+  }
+}
+
+@media only screen 
+and (max-width : 640px) {
+  .ui-widget {
+    font-size: 12px;
+    margin-top: 92px;
+    top: 20px;
+    width: 80%;
+    min-width: 270px;
+    max-width: 480px;
+  }
+
+  .ui-tabs .ui-tabs-nav {
+    padding-left: 10px;
+    margin-top: -82px;
+  }
+
+  .ui-tabs .ui-tabs-nav li:first-child {
+    height: 56px;
+    margin-top: -20px;
+  }
+
+  .ui-state-default.ui-state-active.main-tab .shadow-blocker {
+    margin-top: 55px;
+  }
+
+  .ui-state-default.ui-state-active:not(.main-tab) .shadow-blocker {
+    margin-top: 34px;
+  }
+
+  .ui-tabs .ui-corner-top {
+    border-top-right-radius: 14px;
+    border-top-left-radius: 14px;
+  }
+
+  .ui-tabs .ui-tabs-panel {
+    padding: 12px 18px 32px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .ui-tabs .ui-tabs-panel .pic {
+    width: 32%;
+    margin-top: -42px;
+  }
+
+  .ui-tabs .ui-tabs-nav .main-tab .my-name {
+    background-size: 106px;
+    width: 106px;
+    height: 44px;
+    margin-top: -8px;
+  }
+
+  .ui-tabs .ui-tabs-nav .main-tab .ui-tabs-anchor {
+    padding: 15px 30px;
+  }
+
+  .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    padding: 10px 16px;
+  }
+
+  .ui-tabs .ui-tabs-panel .skills .skill {
+    min-width: 180px;
+  }
+
+  .ui-tabs .ui-tabs-panel .proficiency-legend {
+    margin-left: 24px;
+    font-size: 11px;
+  }
+}
+
+@media only screen 
+and (max-width : 480px) {
+  .ui-widget {
+    font-size: 12px;
+    margin-top: 90px;
+    top: 20px;
+    width: 80%;
+    min-width: 270px;
+    max-width: 480px;
+  }
+
+  .ui-tabs .ui-tabs-nav {
+    padding-left: 10px;
+    margin-top: -82px;
+  }
+
+  .ui-tabs .ui-tabs-nav li:first-child {
+    height: 56px;
+    margin-top: -20px;
+  }
+
+  .ui-state-default.ui-state-active.main-tab .shadow-blocker {
+    margin-top: 55px;
+  }
+
+  .ui-state-default.ui-state-active:not(.main-tab) .shadow-blocker {
+    margin-top: 34px;
+  }
+
+  .ui-tabs .main-tab.ui-corner-top {
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+  }
+
+  .ui-tabs .ui-corner-top {
+    border-top-right-radius: 14px;
+    border-top-left-radius: 14px;
+  }
+
+  .ui-tabs .ui-tabs-panel {
+    padding: 12px 18px 32px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    box-shadow: 0px 0px 10px 3px #dadaf5;
+  }
+
+  .ui-tabs .ui-tabs-panel .top-left {
+    width: 100%;
+  }
+
+  .ui-tabs .ui-tabs-panel .pic {
+    width: 254px;
+    margin-top: -20px;
+  }
+
+  .ui-tabs .ui-tabs-nav .main-tab .my-name {
+    background-size: 90px;
+    width: 90px;
+    height: 40px;
+    margin-top: -5px;
+  }
+
+  .ui-tabs .ui-tabs-nav .main-tab .ui-tabs-anchor {
+    padding: 15px 5px;
+  }
+
+  .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    padding: 10px 4px;
+  }
+
+  .ui-tabs .ui-tabs-panel .proficiency-legend {
+    margin-top: -14px;
+    margin-bottom: 6px;
+  }
+
+  .ui-tabs .ui-tabs-panel .proficiency-legend .pair {
+    display: block;
+  }
+}
